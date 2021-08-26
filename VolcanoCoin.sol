@@ -38,7 +38,7 @@ contract VolcanoCoin {  //4 create contract named VolcanoCoin
     
     //8.initialize variable owner of type address to msg.sender
     //msg.sender is the account creating the transaction
-    address owner=msg.sender; 
+    address owner; 
     
     //12. Events are used as logging functionality which are saved in Ethereum Blockchain
     //it accept type of totalsupply which is uint as parameter

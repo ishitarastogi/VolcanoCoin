@@ -104,7 +104,7 @@ contract VolcanoCoin {  //4 create contract named VolcanoCoin
     
        function transfer(uint256 _transferAmount, address _recepient) public{
          require(_transferAmount <= balances[msg.sender], "Transfer amount should be less than balance");
-	 require(_transferAmount <= 0, "Transfer amount should be greater than zero")
+	 require(_transferAmount >= 0, "Transfer amount should be greater than zero");
         balances[msg.sender] = balances[msg.sender].sub(_transferAmount);
         balances[_recepient] = balances[_recepient].add(_transferAmount);
        payments[msg.sender].push(Payment(_transferAmount, _recepient));

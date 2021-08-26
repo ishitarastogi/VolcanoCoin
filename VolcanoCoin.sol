@@ -27,8 +27,7 @@ contract VolcanoCoin {  //4 create contract named VolcanoCoin
 
 }
     
-    // mapping(address => Payment) payments;
-    // address[] public userAddresses;
+   
  
     mapping(address => Payment[]) payments;
     
@@ -100,16 +99,7 @@ contract VolcanoCoin {  //4 create contract named VolcanoCoin
     }
 
 
-    // function transfer(uint256 _transferAmount, address _recepient) public{
-    //       require(_transferAmount <= balances[msg.sender]);
-    //     balances[msg.sender] = balances[msg.sender].sub(_transferAmount);
-    //     balances[_recepient] = balances[_recepient].add(_transferAmount);
-    //       payments[msg.sender].transferAmount = _transferAmount;
-    //       payments[msg.sender].recepient = _recepient;
 
-    //     userAddresses.push(msg.sender);
-    //     emit transferE(_transferAmount,_recepient);
-    // }
     
     
        function transfer(uint256 _transferAmount, address _recepient) public{
@@ -122,9 +112,7 @@ contract VolcanoCoin {  //4 create contract named VolcanoCoin
         emit transferE(_transferAmount,_recepient);
     }
     
-// function getPaymentsInfo() external view returns (address[] memory) {
-//   return userAddresses;
-// }
+
    
 
 
